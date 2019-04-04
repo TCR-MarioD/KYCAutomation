@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.10.1\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{518649D9-2A97-44FD-AFB6-8F98E32827DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KYC_Domain</RootNamespace>
+    <AssemblyName>KYC Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DHUIFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\DHUIFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtentReports, Version=3.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExtentReports.3.1.2\lib\ExtentReports.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MongoDB.Bson, Version=2.4.0.70, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.4.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.4.0.70, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.4.0\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.4.0.70, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.4.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.9.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.9.0\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.8.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.8.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="TestStack.White, Version=0.13.0.0, Culture=neutral, PublicKeyToken=2672efbf3e161801, processorArchitecture=MSIL">
+      <HintPath>..\packages\TestStack.White.0.13.3\lib\net40\TestStack.White.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin Pages\Billing Pricing Pages\ExchangeRatePage.cs" />
+    <Compile Include="Admin Pages\Billing Pricing Pages\InvoiceGenerationPage.cs" />
+    <Compile Include="Admin Pages\Client Management Pages\AddNewOrganizationPage.cs" />
+    <Compile Include="Admin Pages\Dashboard And Queue Pages\AdminDashboardPage.cs" />
+    <Compile Include="Admin Pages\Dashboard And Queue Pages\AutomationWorkQueuePage.cs" />
+    <Compile Include="Admin Pages\Dashboard And Queue Pages\ManualWorkQueuePage.cs" />
+    <Compile Include="Admin Pages\Dashboard And Queue Pages\PackagesQueuePage.cs" />
+    <Compile Include="Admin Pages\Maintenance Pages\DisbursementFeeManagementPage.cs" />
+    <Compile Include="Admin Pages\Maintenance Pages\SystemFeeManagementPage.cs" />
+    <Compile Include="Admin Pages\Maintenance Pages\TransitManagementPage.cs" />
+    <Compile Include="Admin Pages\Manage User Pages\EditExistingUser.cs" />
+    <Compile Include="Admin Pages\Manage User Pages\SetupNewUserPage.cs" />
+    <Compile Include="Admin Pages\Other Pages\AdminLoginPage.cs" />
+    <Compile Include="Admin Pages\Manage User Pages\AdminManageUserPage.cs" />
+    <Compile Include="Admin Pages\Base Page\AdminPages.cs" />
+    <Compile Include="Admin Pages\Reporting Pages\AdminReportingPage.cs" />
+    <Compile Include="Admin Pages\Other Pages\AdminNavBar.cs" />
+    <Compile Include="Admin Pages\Search Pages\AdminSearchPage.cs" />
+    <Compile Include="Admin Pages\Other Pages\AdminForgotLoginCredentialsPage.cs" />
+    <Compile Include="Admin Pages\Billing Pricing Pages\BillingPricingPage.cs" />
+    <Compile Include="Admin Pages\Client Management Pages\ClientManagementPage.cs" />
+    <Compile Include="Admin Pages\Search Pages\CostOverridePage.cs" />
+    <Compile Include="Admin Pages\Maintenance Pages\MaintenancePage.cs" />
+    <Compile Include="Admin Pages\Search Pages\PackageResultsPage.cs" />
+    <Compile Include="Admin Pages\Search Pages\PackageSummaryPage.cs" />
+    <Compile Include="Auto Client\AutoClient.cs" />
+    <Compile Include="Base Page\BasePage.cs" />
+    <Compile Include="Base Page\NeedHelpPage.cs" />
+    <Compile Include="Client Pages\Base Page\ClientPages.cs" />
+    <Compile Include="Client Pages\Manage User Pages\EditExistingUserPage.cs" />
+    <Compile Include="Client Pages\Manage User Pages\SearchForExistingUserPage.cs" />
+    <Compile Include="Client Pages\Dashboard Pages\SetupDashboardPage.cs" />
+    <Compile Include="Client Pages\Dashboard Pages\DiarizedVerificationDashboardPage.cs" />
+    <Compile Include="Client Pages\Dashboard Pages\ProductivityDashboardPage.cs" />
+    <Compile Include="Client Pages\Manage User Pages\SelectTransitPage.cs" />
+    <Compile Include="Client Pages\Results Pages\MaterialChangesPage.cs" />
+    <Compile Include="Client Pages\Results Pages\ResultSummaryPage.cs" />
+    <Compile Include="Client Pages\Search Pages\BaseSearchResultsPage.cs" />
+    <Compile Include="Client Pages\Search Pages\SearchManualOverridePage.cs" />
+    <Compile Include="Client Pages\Search Pages\QuebecSearchResultsPage.cs" />
+    <Compile Include="Client Pages\Search Pages\SearchConfirmationPage.cs" />
+    <Compile Include="Client Pages\Search Pages\NUANSSearchResultsPage.cs" />
+    <Compile Include="Client Pages\Search Pages\SearchCriteriaPage.cs" />
+    <Compile Include="Client Pages\Other Pages\ClientNavBar.cs" />
+    <Compile Include="Client Pages\Other Pages\ClientLoginPage.cs" />
+    <Compile Include="Client Pages\Dashboard Pages\DashboardHubPage.cs" />
+    <Compile Include="Client Pages\Other Pages\ClientForgotLoginCredentialsPage.cs" />
+    <Compile Include="Client Pages\Other Pages\HomePage.cs" />
+    <Compile Include="Client Pages\Manage User Pages\ManageUsersPage.cs" />
+    <Compile Include="Client Pages\Results Pages\ResultQueuePage.cs" />
+    <Compile Include="Client Pages\Search Pages\SearchOverridePage.cs" />
+    <Compile Include="Client Pages\Search Pages\ServiceSelectionPage.cs" />
+    <Compile Include="Client Pages\Manage User Pages\SetupNewUserPage.cs" />
+    <Compile Include="Data Management\ReferenceData.cs" />
+    <Compile Include="Data Management\TestData.cs" />
+    <Compile Include="Data Management\DynamicTestInformation.cs" />
+    <Compile Include="Helper Classes\TableInterface.cs" />
+    <Compile Include="Helper Classes\ValidServiceSearch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test Harness\CompletedPackageItemPage.cs" />
+    <Compile Include="Test Harness\HistoricDataPage.cs" />
+    <Compile Include="Test Harness\SearchSubmissionPage.cs" />
+    <Compile Include="Test Harness\TestHarnessNavBar.cs" />
+    <Compile Include="Test Harness\TestClientPage.cs" />
+    <Compile Include="Test Harness\TestHarnessLoginPage.cs" />
+    <Compile Include="Test Harness\UserAccountPage.cs" />
+    <Compile Include="WebDriver\Driver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="license" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.2.37\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.2.37\build\Selenium.Chrome.WebDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.2.37\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.2.37\build\Selenium.Chrome.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.10.1\build\NUnit.props'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <ItemGroup>
+    <Content Include="extent-config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+</Project>
