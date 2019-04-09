@@ -53,7 +53,6 @@ namespace KYC_Domain.Client_Pages
             try
             {
                 driver.FindElement(By.Id(usernameInputBoxId)).SendKeys(ConfigurationManager.AppSettings["ClientUsername"]);
-
                 driver.FindElement(By.Id(passwordInputBoxId)).SendKeys(ConfigurationManager.AppSettings["ClientPassword"]);
                 driver.FindElement(By.Id(loginButtonId)).SendKeys(Keys.Enter);
                 driver.FindElement(By.Id(loginButtonId)).Click();

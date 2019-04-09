@@ -104,7 +104,7 @@ namespace KYC_Domain.Base_Page
 
 
         }
-
+        
         public static ExtentReports getInstance()
         {
             return _extent;
