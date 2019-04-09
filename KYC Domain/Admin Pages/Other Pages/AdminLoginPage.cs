@@ -31,10 +31,8 @@ namespace KYC_Domain.Admin_Pages
             {
 
                 driver.FindElement(By.Id(usernameBoxId)).SendKeys(ConfigurationManager.AppSettings["AdminUsername"]);
-
                 driver.FindElement(By.Id(passwordBoxId)).SendKeys(ConfigurationManager.AppSettings["AdminPassword"]);
-
-                driver.FindElement(By.Id(loginButtonId)).SendKeys(Keys.Enter);
+                driver.FindElement(By.Id(loginButtonId)).Click();
 
                 Thread.Sleep(6000);
                 validation.StringLogger.LogWrite("Validation for Admin Dashboard LogIn Page is Passed");

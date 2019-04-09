@@ -56,7 +56,7 @@ namespace KYC_Domain.Client_Pages
 
                 driver.FindElement(By.Id(passwordInputBoxId)).SendKeys(ConfigurationManager.AppSettings["ClientPassword"]);
                 driver.FindElement(By.Id(loginButtonId)).SendKeys(Keys.Enter);
-                // driver.FindElement(By.Id(loginButtonId)).Click();
+                driver.FindElement(By.Id(loginButtonId)).Click();
                 validation.StringLogger.LogWrite("Validation for LogIn Page is Passed");
                 Thread.Sleep(5000);
                 _test.Log(Status.Pass, "Validation for LogIn Page is Passed");

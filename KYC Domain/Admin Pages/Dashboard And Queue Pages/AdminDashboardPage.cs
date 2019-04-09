@@ -13,6 +13,7 @@ namespace KYC_Domain.Admin_Pages
         static string viewAutomationWorkQueueLinkId = "ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder_Body_hplAutoView";
         static string processManualWorkQueueLinkId = "ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder_Body_hplManualProcess";
 
+
         protected override bool IsAt()
         {
             return driver.Url.Contains("Dashboard_Home");
